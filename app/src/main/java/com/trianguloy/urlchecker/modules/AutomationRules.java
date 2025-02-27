@@ -1,7 +1,10 @@
 package com.trianguloy.urlchecker.modules;
 
+import static com.trianguloy.urlchecker.utilities.methods.JavaUtils.valueOrDefault;
+
 import android.app.Activity;
 import android.content.Context;
+import android.util.Pair;
 
 import com.trianguloy.urlchecker.R;
 import com.trianguloy.urlchecker.url.UrlData;
@@ -21,8 +24,18 @@ public class AutomationRules extends JsonCatalog {
 
     /* ------------------- inner classes ------------------- */
 
-    /** Represents an available automation */
-    public record Automation<T extends AModuleDialog>(String key, int description, JavaUtils.Consumer<T> action) {
+    /**
+     * Represents an available automation.
+     *
+     * @param key         the identifier of the automation, must be unique
+     * @param description string resource that explains this automation
+     * @param action      action that will be executed for this automation.
+     *                    Two parameters: DialogModule (the actual automation dialog) and arguments [optional] (the user defined automation arguments)
+     */
+    public record Automation<T extends AModuleDialog>(String key, int description, JavaUtils.BiConsumer<T, JSONObject> action) {
+        public Automation(String key, int description, JavaUtils.Consumer<T> noArgsAction) {
+            this(key, description, (t, args) -> noArgsAction.accept(t));
+        }
     }
 
     /* ------------------- static ------------------- */
@@ -67,9 +80,9 @@ public class AutomationRules extends JsonCatalog {
                 ;
     }
 
-    /** Returns the automation ids that match a specific [urlData] */
-    public List<String> check(UrlData urlData) {
-        var matches = new ArrayList<String>();
+    /** Returns the automation ids+arguments that match a specific [urlData] */
+    public List<Pair<String, JSONObject>> check(UrlData urlData) {
+        var matches = new ArrayList<Pair<String, JSONObject>>();
 
         var catalog = getCatalog();
         for (var key : JavaUtils.toList(catalog.keys())) {
@@ -77,9 +90,12 @@ public class AutomationRules extends JsonCatalog {
                 var automation = catalog.getJSONObject(key);
                 if (!automation.optBoolean("enabled", true)) continue;
 
-                for (String pattern : JavaUtils.getArrayOrElement(automation.get("regex"), String.class)){
+                for (var pattern : JavaUtils.getArrayOrElement(automation.get("regex"), String.class)) {
                     if (urlData.url.matches(pattern)) {
-                        matches.add(automation.getString("action"));
+                        matches.add(Pair.create(
+                                automation.getString("action"),
+                                valueOrDefault(automation.optJSONObject("args"), new JSONObject())
+                        ));
                         break;
                     }
                 }

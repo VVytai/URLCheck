@@ -24,6 +24,8 @@ import com.trianguloy.urlchecker.utilities.methods.HttpUtils;
 import com.trianguloy.urlchecker.utilities.methods.JavaUtils;
 import com.trianguloy.urlchecker.utilities.wrappers.DefaultTextWatcher;
 
+import org.json.JSONException;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -92,7 +94,13 @@ class WebhookDialog extends AModuleDialog {
             new AutomationRules.Automation<>(
                     "webhook",
                     R.string.mWebhook_auto_send,
-                    WebhookDialog::sendToWebhook
+                    ((t, args) -> {
+                        try {
+                            Toast.makeText(t.getActivity(), args.getString("text"), Toast.LENGTH_SHORT).show();
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+                    })
             )
     );
 

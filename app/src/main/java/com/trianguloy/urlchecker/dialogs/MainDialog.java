@@ -29,7 +29,10 @@ import com.trianguloy.urlchecker.utilities.AndroidSettings;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.Animations;
 import com.trianguloy.urlchecker.utilities.methods.Inflater;
+import com.trianguloy.urlchecker.utilities.methods.JavaUtils;
 import com.trianguloy.urlchecker.utilities.methods.LocaleUtils;
+
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -67,7 +70,7 @@ public class MainDialog extends Activity {
     /**
      * Available automations
      */
-    private final Map<String, Runnable> automations = new ArrayMap<>();
+    private final Map<String, JavaUtils.Consumer<JSONObject>> automations = new ArrayMap<>();
 
     /**
      * The current url
@@ -162,14 +165,14 @@ public class MainDialog extends Activity {
             // fifth run automations
             if (automationRules.automationsEnabledPref.get()) {
                 for (var automationKey : automationRules.check(urlData)) {
-                    var action = automations.get(automationKey);
+                    var action = automations.get(automationKey.first);
                     if (action == null) {
                         if (automationRules.automationsShowErrorToast.get()) {
                             Toast.makeText(this, getString(R.string.auto_notFound, automationKey), Toast.LENGTH_LONG).show();
                         }
                     } else {
                         try {
-                            action.run();
+                            action.accept(automationKey.second);
                         } catch (Exception e) {
                             AndroidUtils.assertError("Exception while running automation " + automationKey, e);
                         }
@@ -342,7 +345,7 @@ public class MainDialog extends Activity {
                     if (BuildConfig.DEBUG && automations.containsKey(automation.key())) {
                         AndroidUtils.assertError("There is already an automation with key " + automation.key() + "!");
                     }
-                    automations.put(automation.key(), () -> automation.action().accept(module));
+                    automations.put(automation.key(), args -> automation.action().accept(module, args));
                 }
             }
         } catch (Exception e) {
