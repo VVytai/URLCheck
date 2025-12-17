@@ -6,9 +6,9 @@ android {
     namespace 'com.trianguloy.urlchecker'
     defaultConfig {
         applicationId "com.trianguloy.urlchecker"
-        compileSdk 34
+        compileSdkVersion 36
         minSdkVersion 19
-        targetSdkVersion 34
+        targetSdkVersion 36
         versionCode 45
         versionName "3.4"
     }
