@@ -54,7 +54,9 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         run: |
           (
-          sed '/^$/q' ./app/src/main/play/release-notes/en-US/default.txt
+          cat ./fastlane/metadata/android/en-US/changelogs/$(ls ./fastlane/metadata/android/en-US/changelogs/ | sort -n | tail -n 1)
+          echo
+          echo
           cat - << EOF
           ---
           
