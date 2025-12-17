@@ -8,29 +8,18 @@ URLCheck được phát triển bởi TrianguloY, ban đầu dành cho mục đ�
 Ứng dụng được cấu trúc theo thiết lập mô-đun, bạn có thể bật/tắt và sắp xếp lại các mô-đun riêng lẻ, bao gồm:
 
 * Văn bản đầu vào: Hiển thị url hiện tại có thể chỉnh sửa thủ công. Không thể bị vô hiệu hóa.
-
 * Lịch sử: Xem và hoàn nguyên mọi thay đổi từ các mô-đun khác, bao gồm các chỉnh sửa từ người dùng (tính năng hoàn tác/làm lại điển hình)
-
 * Nhật ký: Giữ nhật ký của tất cả các url đã kiểm tra mà bạn có thể xem, chỉnh sửa, sao chép, xóa...
-
 * Mã trạng thái: Bằng cách nhấn nút, yêu cầu mạng sẽ được thực hiện để truy xuất url đó và mã trạng thái sẽ được hiển thị (ok, lỗi máy chủ, không tìm thấy...). Ngoài ra, nếu nó tương ứng với một chuyển hướng, hãy nhấn vào thông báo để kiểm tra url mới. Url được tìm nạp nhưng không được đánh giá, do đó chuyển hướng dựa trên javascript sẽ không được phát hiện.
-
 * Url Scanner: Cho phép bạn quét url bằng VirusTotal và kiểm tra báo cáo. Cần có khóa API VirusTotal cá nhân miễn phí để nó hoạt động. VirusTotal™ là nhãn hiệu của Google, Inc.
-
 * Trình dọn dẹp Url: Sử dụng danh mục ClearURLs để xóa các tham số giới thiệu và vô dụng khỏi url. Nó cũng cho phép chuyển hướng url ngoại tuyến phổ biến. Danh mục tích hợp từ https://docs.clearurls.xyz/latest/specs/rules/
-
 * Unshortener: Sử dụng https://unshorten.me/ để rút ngắn các url từ xa.
-
 * Xóa truy vấn: Hiển thị các truy vấn url riêng lẻ đã được giải mã mà bạn có thể xóa hoặc kiểm tra.
-
 * Mô-đun mẫu: Kiểm tra url bằng các mẫu biểu thức chính quy để cảnh báo, gợi ý hoặc áp dụng các thay thế. Bạn có thể sửa đổi hoặc tạo các mẫu của riêng mình hoặc thậm chí sử dụng các mẫu do người dùng tạo.
 Các mẫu tích hợp bao gồm:
 - Cảnh báo khi chứa các ký tự không phải mã ascii như chữ cái Hy Lạp. Điều này có thể được sử dụng để lừa đảo: googĺe.com vs google.com
 - Đề nghị thay 'http' bằng 'https'
 - Đề xuất thay thế Youtube, Reddit hoặc Twitter bằng các lựa chọn thay thế thân thiện với quyền riêng tư [bị tắt theo mặc định]
-
 * Trình kiểm tra máy chủ: Mô-đun này gắn nhãn máy chủ, được định cấu hình bằng cách chỉ định chúng theo cách thủ công hoặc bằng cách sử dụng tệp giống như máy chủ từ xa. Bạn có thể sử dụng nó để cảnh báo về các trang web nguy hiểm hoặc đặc biệt. Cấu hình dựng sẵn chỉ định máy chủ của StevenBlack (phần mềm quảng cáo/phần mềm độc hại, tin giả, cờ bạc và nội dung người lớn) từ https://github.com/StevenBlack/hosts
-
 * Mô-đun gỡ lỗi: Hiển thị ý định uri và thông tin tùy chọn về dịch vụ ctabs (tab tùy chỉnh). Điều này là dành cho các nhà phát triển.
-
 * Mô-đun mở: Chứa các nút mở và chia sẻ. Nếu một liên kết có thể được mở bằng nhiều ứng dụng, một mũi tên sẽ hiển thị để bạn chọn. Không thể bị vô hiệu hóa.

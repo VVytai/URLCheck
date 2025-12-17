@@ -8,23 +8,14 @@ O URLCheck é desenvolvido por TrianguloY, originalmente para uso pessoal. É de
 A aplicaçãp é estruturado com uma configuração modular, pode ativar/desativar e reordenar módulos individuais, que incluem:
 
 * Texto de entrada: Exibe a url atual que pode ser editada manualmente. Não pode ser desabilitado.
-
 * Histórico: Visualize e reverta qualquer alteração de outros módulos, incluindo edições do usuário (recurso típico de desfazer/refazer)
-
 * Log: Mantém um log de todas as urls verificadas, que pode visualizar, editar, copiar, limpar...
-
 * Código de status: Ao pressionar o botão será feita uma petição para recuperar aquela url, e o código de status será exibido (ok, erro do servidor, não encontrado...). Além disso, se corresponder a um redirecionamento, pressione a mensagem para verificar a nova url. O URL é buscado, mas não avaliado, então o redirecionamento baseado em javascript não será detectado.
-
 * Url Scanner: Permite verificar a url usando o VirusTotal e verificar o relatório. Uma chave de API pessoal gratuita do VirusTotal é necessária para que funcione. VirusTotal™ é uma marca comercial da Google, Inc.
-
 * Url Cleaner: Usa o catálogo ClearURLs para remover referências e parâmetros inúteis da url. Também permite redirecionamentos de URL offline comuns. Catálogo integrado de https://docs.clearurls.xyz/latest/specs/rules/
-
 * Removedor de consultas: Exibe as consultas de url individuais decodificadas, que pode remover ou verificar.
-
 * Módulo de padrões: Executa verificações com base em padrões. Os padrões integrados incluem:
     - Avisa para links http, permite substituir por https.
     - Avisa para caracteres não-ascii como letras gregas. Isso pode ser usado para phishing: googĺe.com vs google.com.
-
 * Módulo de depuração: Exibe a intenção uri e, opcionalmente, informações sobre o serviço ctabs (guias personalizadas). Isso é destinado a desenvolvedores.
-
 * Módulo Abrir: Contém os botões abrir e compartilhar. Se um link puder ser aberto com vários aplicativos, uma seta será exibida para permitir que escolha. Não pode ser desabilitado.
