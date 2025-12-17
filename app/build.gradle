@@ -9,15 +9,15 @@ android {
         compileSdkVersion 36
         minSdkVersion 19
         targetSdkVersion 36
-        versionCode 45
-        versionName "3.4"
+        versionCode 46
+        versionName "3.4.1"
     }
 
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         alpha {
             initWith(buildTypes.debug)
