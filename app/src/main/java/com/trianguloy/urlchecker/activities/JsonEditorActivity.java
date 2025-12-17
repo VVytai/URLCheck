@@ -1,7 +1,11 @@
 package com.trianguloy.urlchecker.activities;
 
+import static android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,6 +47,9 @@ public class JsonEditorActivity extends Activity {
         setTitle(R.string.json_editor);
         AndroidUtils.configureUp(this);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(PRIORITY_DEFAULT, this::onBackPressed);
+        }
 
         try {
             // this is a bit dangerous
@@ -96,6 +103,7 @@ public class JsonEditorActivity extends Activity {
         return true;
     }
 
+    @SuppressLint("GestureBackNavigation")
     @Override
     public void onBackPressed() {
         // validate

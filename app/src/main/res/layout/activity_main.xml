@@ -6,6 +6,7 @@
     android:layout_gravity="center"
     android:orientation="vertical"
     android:weightSum="5"
+    android:fitsSystemWindows="true"
     tools:context=".activities.MainActivity">
 
     <LinearLayout

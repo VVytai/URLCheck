@@ -1,15 +1,18 @@
 package com.trianguloy.urlchecker.activities;
 
+import static android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT;
+
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.trianguloy.urlchecker.R;
-//import com.trianguloy.urlchecker.fragments.BrowserButtonsFragment;
 import com.trianguloy.urlchecker.fragments.BrowserButtonsFragment;
 import com.trianguloy.urlchecker.fragments.ResultCodeInjector;
 import com.trianguloy.urlchecker.utilities.AndroidSettings;
@@ -43,6 +46,10 @@ public class TutorialActivity extends Activity {
         setContentView(R.layout.activity_tutorial);
         setTitle(R.string.tutorial);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            getOnBackInvokedDispatcher().registerOnBackInvokedCallback(PRIORITY_DEFAULT, this::onBackPressed);
+        }
+
         tutorialDone = DONE(this);
 
         flipper = new FixedViewFlipper(findViewById(R.id.flipper));
@@ -72,6 +79,7 @@ public class TutorialActivity extends Activity {
 
     /* ------------------- buttons ------------------- */
 
+    @SuppressLint("GestureBackNavigation")
     @Override
     public void onBackPressed() {
         prev(null);
