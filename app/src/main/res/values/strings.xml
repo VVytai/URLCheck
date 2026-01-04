@@ -162,6 +162,8 @@ Hope you find the app useful! And don't hesitate to suggest features, report bug
     <string name="json_format_error">The content is not valid Json, can\'t be parsed.</string>
     <string name="json_discard">Warning, this will replace the editor content with the saved json. All changes made will be lost. Do you want to continue?</string>
     <string name="json_reset">Warning, this will replace the editor content with the built-in json. All editor changes made will be lost, but saved content will not be modified unless manually saved. Do you want to continue?</string>
+    <string name="json_bigger">Increase font size</string>
+    <string name="json_smaller">Decrease font size</string>
     <!--
         shortcuts
     -->

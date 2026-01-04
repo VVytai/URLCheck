@@ -1,10 +1,12 @@
 package com.trianguloy.urlchecker.activities;
 
+import static android.util.TypedValue.COMPLEX_UNIT_SP;
 import static android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,6 +18,7 @@ import android.widget.Toast;
 
 import com.trianguloy.urlchecker.R;
 import com.trianguloy.urlchecker.utilities.AndroidSettings;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.LocaleUtils;
 
@@ -28,6 +31,12 @@ import java.util.Objects;
 /** Activity for editing a json */
 public class JsonEditorActivity extends Activity {
 
+
+    /** The editor size pref */
+    public static GenericPref.Flt EDITOR_SIZE(float defaultValue, Context cntx) {
+        return new GenericPref.Flt("jsonPref_size", defaultValue, cntx);
+    }
+
     public static final String EXTRA_CLASS = "data";
 
     private static final int INDENT_SPACES = 2;
@@ -35,6 +44,7 @@ public class JsonEditorActivity extends Activity {
     private JsonEditorInterface provider;
     private TextView editor;
     private ViewGroup info;
+    private GenericPref.Flt editorSizePref;
 
     // ------------------- listeners -------------------
 
@@ -68,6 +78,8 @@ public class JsonEditorActivity extends Activity {
         editor = findViewById(R.id.data);
         editor.setText(noFailToString(provider.getJson()));
 
+        editorSizePref = EDITOR_SIZE(editor.getTextSize() / getResources().getDisplayMetrics().scaledDensity, this);
+        editor.setTextSize(COMPLEX_UNIT_SP, editorSizePref.get());
     }
 
     @Override
@@ -95,6 +107,9 @@ public class JsonEditorActivity extends Activity {
                 item.setChecked(!item.isChecked());
                 info.setVisibility(item.isChecked() ? View.VISIBLE : View.GONE);
             }
+            // font size
+            case R.id.menu_bigger -> changeFontSize(2);
+            case R.id.menu_smaller -> changeFontSize(-2);
 
             default -> {
                 return super.onOptionsItemSelected(item);
@@ -203,6 +218,13 @@ public class JsonEditorActivity extends Activity {
                     .setPositiveButton(android.R.string.ok, null)
                     .show();
         }
+    }
+
+    /** Changes the editor size by a given amount (can be negative). */
+    private void changeFontSize(int delta) {
+        var newSize = (editor.getTextSize() / getResources().getDisplayMetrics().scaledDensity) + delta;
+        editor.setTextSize(newSize);
+        editorSizePref.set(newSize);
     }
 
     /* ------------------- utils ------------------- */

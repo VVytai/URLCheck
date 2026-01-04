@@ -179,6 +179,23 @@ public abstract class GenericPref<T> {
         }
     }
 
+    /** A Float preference */
+    static public class Flt extends GenericPref<Float> {
+        public Flt(String prefName, Float defaultValue, Context cntx) {
+            super(prefName, defaultValue, cntx);
+        }
+
+        @Override
+        public Float get() {
+            return prefs.getFloat(prefName, defaultValue);
+        }
+
+        @Override
+        protected void save(Float value) {
+            prefs.edit().putFloat(prefName, value).apply();
+        }
+    }
+
     /** A boolean preference */
     static public class Bool extends GenericPref<Boolean> {
         public Bool(String prefName, Boolean defaultValue, Context cntx) {
