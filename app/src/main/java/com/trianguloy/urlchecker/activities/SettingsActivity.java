@@ -17,7 +17,8 @@ import com.trianguloy.urlchecker.R;
 import com.trianguloy.urlchecker.fragments.BrowserButtonsFragment;
 import com.trianguloy.urlchecker.fragments.ResultCodeInjector;
 import com.trianguloy.urlchecker.utilities.AndroidSettings;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.BoolPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.IntPref;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.Animations;
 import com.trianguloy.urlchecker.utilities.methods.LocaleUtils;
@@ -29,13 +30,13 @@ import java.util.Objects;
 public class SettingsActivity extends Activity {
 
     /** The width pref */
-    public static GenericPref.Int WIDTH_PREF(Context cntx) {
-        return new GenericPref.Int("width", WindowManager.LayoutParams.WRAP_CONTENT, cntx);
+    public static IntPref WIDTH_PREF(Context cntx) {
+        return new IntPref("width", WindowManager.LayoutParams.WRAP_CONTENT, cntx);
     }
 
     /** The sync process-text pref */
-    public static GenericPref.Bool SYNC_PROCESSTEXT_PREF(Context cntx) {
-        return new GenericPref.Bool("syncProcessText", true, cntx);
+    public static BoolPref SYNC_PROCESSTEXT_PREF(Context cntx) {
+        return new BoolPref("syncProcessText", true, cntx);
     }
 
 

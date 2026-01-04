@@ -8,7 +8,7 @@ import android.util.Log;
 
 import com.trianguloy.urlchecker.BuildConfig;
 import com.trianguloy.urlchecker.R;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.StringPref;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,8 +41,8 @@ public interface LocaleUtils {
     }
 
     /** The locale pref */
-    static GenericPref.Str LOCALE_PREF(Context cntx) {
-        return new GenericPref.Str("locale", "", cntx);
+    static StringPref LOCALE_PREF(Context cntx) {
+        return new StringPref("locale", "", cntx);
     }
 
     /** Sets the locale to an activity */

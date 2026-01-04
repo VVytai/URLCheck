@@ -18,7 +18,7 @@ import com.trianguloy.urlchecker.modules.AModuleData;
 import com.trianguloy.urlchecker.modules.AModuleDialog;
 import com.trianguloy.urlchecker.modules.AutomationRules;
 import com.trianguloy.urlchecker.url.UrlData;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.StringPref;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.JavaUtils;
 import com.trianguloy.urlchecker.utilities.wrappers.Connection;
@@ -39,12 +39,12 @@ public class WebhookModule extends AModuleData {
 
     public static final String URL_PREF = "webhook_url";
 
-    public static GenericPref.Str WEBHOOK_URL_PREF(Context cntx) {
-        return new GenericPref.Str(URL_PREF, "", cntx);
+    public static StringPref WEBHOOK_URL_PREF(Context cntx) {
+        return new StringPref(URL_PREF, "", cntx);
     }
 
-    public static GenericPref.Str WEBHOOK_BODY_PREF(Context cntx) {
-        return new GenericPref.Str("webhook_body", WebhookConfig.DEFAULT, cntx);
+    public static StringPref WEBHOOK_BODY_PREF(Context cntx) {
+        return new StringPref("webhook_body", WebhookConfig.DEFAULT, cntx);
     }
 
     @Override
@@ -82,8 +82,8 @@ class WebhookDialog extends AModuleDialog {
 
     private static final Executor executor = Executors.newSingleThreadExecutor();
 
-    private final GenericPref.Str webhookUrl;
-    private final GenericPref.Str webhookBody;
+    private final StringPref webhookUrl;
+    private final StringPref webhookBody;
     private TextView statusText;
     private Button statusButton;
 
@@ -222,8 +222,8 @@ class WebhookConfig extends AModuleConfig {
                     }""")
     );
 
-    private final GenericPref.Str webhookUrl;
-    private final GenericPref.Str webhookBody;
+    private final StringPref webhookUrl;
+    private final StringPref webhookBody;
 
     public WebhookConfig(ModulesActivity activity) {
         super(activity);

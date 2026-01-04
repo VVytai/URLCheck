@@ -16,7 +16,7 @@ import com.trianguloy.urlchecker.R;
 import com.trianguloy.urlchecker.fragments.BrowserButtonsFragment;
 import com.trianguloy.urlchecker.fragments.ResultCodeInjector;
 import com.trianguloy.urlchecker.utilities.AndroidSettings;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.BoolPref;
 import com.trianguloy.urlchecker.utilities.methods.LocaleUtils;
 import com.trianguloy.urlchecker.utilities.methods.PackageUtils;
 import com.trianguloy.urlchecker.utilities.wrappers.DoubleEvent;
@@ -30,12 +30,12 @@ public class TutorialActivity extends Activity {
 
     private Button prevButton;
     private Button nextButton;
-    private GenericPref.Bool tutorialDone;
+    private BoolPref tutorialDone;
     private FixedViewFlipper flipper;
     private TextView pageIndexText;
 
-    public static GenericPref.Bool DONE(Context cntx) {
-        return new GenericPref.Bool("tutorial_done", false, cntx);
+    public static BoolPref DONE(Context cntx) {
+        return new BoolPref("tutorial_done", false, cntx);
     }
 
     @Override

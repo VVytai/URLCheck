@@ -24,7 +24,8 @@ import com.trianguloy.urlchecker.modules.companions.LastOpened;
 import com.trianguloy.urlchecker.modules.companions.ShareUtility;
 import com.trianguloy.urlchecker.modules.companions.Size;
 import com.trianguloy.urlchecker.url.UrlData;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.BoolPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.EnumerationPref;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.JavaUtils;
 import com.trianguloy.urlchecker.utilities.methods.PackageUtils;
@@ -37,20 +38,20 @@ import java.util.Objects;
 /** This module contains an open and share buttons */
 public class OpenModule extends AModuleData {
 
-    public static GenericPref.Bool CLOSEOPEN_PREF(Context cntx) {
-        return new GenericPref.Bool("open_closeopen", true, cntx);
+    public static BoolPref CLOSEOPEN_PREF(Context cntx) {
+        return new BoolPref("open_closeopen", true, cntx);
     }
 
-    public static GenericPref.Bool NOREFERRER_PREF(Context cntx) {
-        return new GenericPref.Bool("open_noReferrer", false, cntx);
+    public static BoolPref NOREFERRER_PREF(Context cntx) {
+        return new BoolPref("open_noReferrer", false, cntx);
     }
 
-    public static GenericPref.Bool REJECTED_PREF(Context cntx) {
-        return new GenericPref.Bool("open_rejected", true, cntx);
+    public static BoolPref REJECTED_PREF(Context cntx) {
+        return new BoolPref("open_rejected", true, cntx);
     }
 
-    public static GenericPref.Enumeration<Size> ICONSIZE_PREF(Context cntx) {
-        return new GenericPref.Enumeration<>("open_iconsize", Size.NORMAL, Size.class, cntx);
+    public static EnumerationPref<Size> ICONSIZE_PREF(Context cntx) {
+        return new EnumerationPref<>("open_iconsize", Size.NORMAL, Size.class, cntx);
     }
 
     @Override
@@ -102,10 +103,10 @@ class OpenDialog extends AModuleDialog {
             new AutomationRules.Automation<>("close", R.string.auto_close, dialog -> dialog.getActivity().finish())
     );
 
-    private final GenericPref.Bool closeOpenPref;
-    private final GenericPref.Bool noReferrerPref;
-    private final GenericPref.Bool rejectedPref;
-    private final GenericPref.Enumeration<Size> iconSizePref;
+    private final BoolPref closeOpenPref;
+    private final BoolPref noReferrerPref;
+    private final BoolPref rejectedPref;
+    private final EnumerationPref<Size> iconSizePref;
 
     private final LastOpened lastOpened;
     private final CTabs cTabs;

@@ -16,7 +16,8 @@ import com.trianguloy.urlchecker.modules.AModuleConfig;
 import com.trianguloy.urlchecker.modules.AModuleData;
 import com.trianguloy.urlchecker.modules.AModuleDialog;
 import com.trianguloy.urlchecker.url.UrlData;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.IntPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.StringPref;
 import com.trianguloy.urlchecker.utilities.methods.JavaUtils;
 
 import java.text.DateFormat;
@@ -27,12 +28,12 @@ public class LogModule extends AModuleData {
 
     public static final String PREF = "log_data";
 
-    public static GenericPref.Str LOG_DATA(Context cntx) {
-        return new GenericPref.Str(PREF, "", cntx);
+    public static StringPref LOG_DATA(Context cntx) {
+        return new StringPref(PREF, "", cntx);
     }
 
-    public static GenericPref.Int LOG_LIMIT(Context cntx) {
-        return new GenericPref.Int("log_limit", 0, cntx); // 0 means unlimited
+    public static IntPref LOG_LIMIT(Context cntx) {
+        return new IntPref("log_limit", 0, cntx); // 0 means unlimited
     }
 
     @Override
@@ -58,8 +59,8 @@ public class LogModule extends AModuleData {
 
 class LogDialog extends AModuleDialog {
 
-    private final GenericPref.Str log;
-    private final GenericPref.Int limit;
+    private final StringPref log;
+    private final IntPref limit;
 
     public LogDialog(MainDialog dialog) {
         super(dialog);
@@ -95,7 +96,7 @@ class LogDialog extends AModuleDialog {
 
 class LogConfig extends AModuleConfig {
 
-    private final GenericPref.Str log;
+    private final StringPref log;
 
     public LogConfig(ModulesActivity activity) {
         super(activity);

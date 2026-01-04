@@ -16,7 +16,8 @@ import com.trianguloy.urlchecker.modules.AModuleConfig;
 import com.trianguloy.urlchecker.modules.AModuleData;
 import com.trianguloy.urlchecker.modules.ModuleManager;
 import com.trianguloy.urlchecker.utilities.AndroidSettings;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.BoolPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.ListStringPref;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.Animations;
 import com.trianguloy.urlchecker.utilities.methods.Inflater;
@@ -34,7 +35,7 @@ public class ModulesActivity extends Activity {
 
     private LinearLayout list;
     private final Map<AModuleConfig, Switch> switches = new HashMap<>();
-    private GenericPref.LstStr order;
+    private ListStringPref order;
 
     // ------------------- listeners -------------------
 
@@ -106,7 +107,7 @@ public class ModulesActivity extends Activity {
         // configure enable toggle
         Switch toggleEnable = parent.findViewById(R.id.enable);
         AndroidUtils.longTapForDescription(toggleEnable);
-        final GenericPref.Bool enabled_pref = ModuleManager.getEnabledPrefOfModule(module, this);
+        final BoolPref enabled_pref = ModuleManager.getEnabledPrefOfModule(module, this);
         toggleEnable.setChecked(enabled_pref.get());
         toggleEnable.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {

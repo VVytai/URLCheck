@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import com.trianguloy.urlchecker.R;
 import com.trianguloy.urlchecker.utilities.AndroidSettings;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.FloatPref;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.LocaleUtils;
 
@@ -33,8 +33,8 @@ public class JsonEditorActivity extends Activity {
 
 
     /** The editor size pref */
-    public static GenericPref.Flt EDITOR_SIZE(float defaultValue, Context cntx) {
-        return new GenericPref.Flt("jsonPref_size", defaultValue, cntx);
+    public static FloatPref EDITOR_SIZE(float defaultValue, Context cntx) {
+        return new FloatPref("jsonPref_size", defaultValue, cntx);
     }
 
     public static final String EXTRA_CLASS = "data";
@@ -44,7 +44,7 @@ public class JsonEditorActivity extends Activity {
     private JsonEditorInterface provider;
     private TextView editor;
     private ViewGroup info;
-    private GenericPref.Flt editorSizePref;
+    private FloatPref editorSizePref;
 
     // ------------------- listeners -------------------
 

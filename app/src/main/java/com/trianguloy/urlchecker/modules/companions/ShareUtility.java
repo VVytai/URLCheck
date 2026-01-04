@@ -7,7 +7,7 @@ import android.view.View;
 
 import com.trianguloy.urlchecker.R;
 import com.trianguloy.urlchecker.dialogs.MainDialog;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.BoolPref;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.PackageUtils;
 
@@ -16,16 +16,16 @@ import com.trianguloy.urlchecker.utilities.methods.PackageUtils;
  * Currently in the OpenDialog, but may be moved to an independent dialog in the future.
  */
 public interface ShareUtility {
-    static GenericPref.Bool CLOSESHARE_PREF(Context cntx) {
-        return new GenericPref.Bool("open_closeshare", true, cntx);
+    static BoolPref CLOSESHARE_PREF(Context cntx) {
+        return new BoolPref("open_closeshare", true, cntx);
     }
 
-    static GenericPref.Bool CLOSECOPY_PREF(Context cntx) {
-        return new GenericPref.Bool("open_closecopy", false, cntx);
+    static BoolPref CLOSECOPY_PREF(Context cntx) {
+        return new BoolPref("open_closecopy", false, cntx);
     }
 
-    static GenericPref.Bool MERGECOPY_PREF(Context cntx) {
-        return new GenericPref.Bool("open_mergeCopy", false, cntx);
+    static BoolPref MERGECOPY_PREF(Context cntx) {
+        return new BoolPref("open_mergeCopy", false, cntx);
     }
 
     /** The onInitialize of an AModuleConfig */
@@ -39,9 +39,9 @@ public interface ShareUtility {
     class Dialog {
 
         private final MainDialog mainDialog;
-        private final GenericPref.Bool closeSharePref;
-        private final GenericPref.Bool closeCopyPref;
-        private final GenericPref.Bool mergeCopyPref;
+        private final BoolPref closeSharePref;
+        private final BoolPref closeCopyPref;
+        private final BoolPref mergeCopyPref;
 
         public Dialog(MainDialog mainDialog) {
             this.mainDialog = mainDialog;

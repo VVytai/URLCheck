@@ -17,7 +17,7 @@ import com.trianguloy.urlchecker.modules.AModuleData;
 import com.trianguloy.urlchecker.modules.AModuleDialog;
 import com.trianguloy.urlchecker.modules.AutomationRules;
 import com.trianguloy.urlchecker.url.UrlData;
-import com.trianguloy.urlchecker.utilities.generics.GenericPref;
+import com.trianguloy.urlchecker.utilities.generics.GenericPref.BoolPref;
 import com.trianguloy.urlchecker.utilities.methods.AndroidUtils;
 import com.trianguloy.urlchecker.utilities.methods.HttpUtils;
 
@@ -32,8 +32,8 @@ import java.util.List;
  */
 public class StatusModule extends AModuleData {
 
-    public static GenericPref.Bool AUTOREDIR_PREF(Context cntx) {
-        return new GenericPref.Bool("statusCode_autoRedir", false, cntx);
+    public static BoolPref AUTOREDIR_PREF(Context cntx) {
+        return new BoolPref("statusCode_autoRedir", false, cntx);
     }
 
     @Override
@@ -94,7 +94,7 @@ class StatusDialog extends AModuleDialog {
 
     private Thread thread = null;
 
-    private GenericPref.Bool autoRedir;
+    private BoolPref autoRedir;
 
     public StatusDialog(MainDialog dialog) {
         super(dialog);
