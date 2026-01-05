@@ -41,7 +41,7 @@ Traduceri: %3$s."</string>
     <string name="menu_toggleDecorations">Comută toate titlurile</string>
     <string name="desc_up">Mută sus</string>
     <string name="desc_down">Mută jos</string>
-    <string name="desc_decorations">Arată/ascunde titlul</string>
+    <string name="desc_decorations">Afișează/ascunde titlul</string>
     <string name="desc_enable">Activează/dezactivează modulul</string>
     <!--
         settings
@@ -53,12 +53,12 @@ Traduceri: %3$s."</string>
     <string name="btn_linksSettings">Deschide linkurile acceptate</string>
     <string name="btn_androidSettings">Setări aplicație Android</string>
     <string name="txt_theme">Temă:</string>
-    <string name="spin_darkTheme">Întunecat</string>
-    <string name="spin_lightTheme">Luminos</string>
+    <string name="spin_darkTheme">Întunecată</string>
+    <string name="spin_lightTheme">Luminoasă</string>
     <string name="txt_width">Lățime dialog:\nAtenție! Valorile mici pot ascunde elemente ale ecranului.</string>
-    <string name="spin_fullWidth">Complet</string>
-    <string name="spin_dynamicWidth">Dinamic</string>
-    <string name="txt_locale">Limbă (Locale):</string>
+    <string name="spin_fullWidth">Completă</string>
+    <string name="spin_dynamicWidth">Dinamică</string>
+    <string name="txt_locale">Limbă:</string>
     <string name="txt_animation">Activează animațiile</string>
     <string name="txt_processText">Sincronizează URL-ul cu textul editabil (când aplicația este deschisă prin apăsare lungă pe text într-o casetă de introducere)</string>
     <string name="btn_tutorialSettings">Repetă tutorialul</string>
@@ -66,7 +66,7 @@ Traduceri: %3$s."</string>
     <!--
         Backup / Restore
     -->
-    <string name="bck_mn_advanced">Arată opțiuni avansate</string>
+    <string name="bck_mn_advanced">Afișează opțiuni avansate</string>
     <string name="btn_backup">Copie de rezervă</string>
     <string name="btn_restore">Restaurează</string>
     <string name="btn_delete">Șterge</string>
@@ -140,7 +140,7 @@ Sperăm că vei găsi aplicația utilă! Și nu ezita să sugerezi funcții, să
     <string name="hidden">Ascuns</string>
     <string name="share">Partajează</string>
     <string name="canceled">Anulat</string>
-    <string name="deviceDefault">Implicit dispozitiv</string>
+    <string name="deviceDefault">Implicită dispozitiv</string>
     <string name="next">Următorul</string>
     <string name="back">Înapoi</string>
     <string name="dismiss">Închide</string>
@@ -154,7 +154,7 @@ Sperăm că vei găsi aplicația utilă! Și nu ezita să sugerezi funcții, să
         json
     -->
     <string name="json_editor">Editor Json</string>
-    <string name="json_info">Arată info</string>
+    <string name="json_info">Afișează info</string>
     <string name="json_ignore">Conținutul nu este Json valid. Vrei să renunți la el și să închizi editorul?</string>
     <string name="json_discard_close">Renunță și închide</string>
     <string name="json_save">Există modificări nesalvate, vrei să le salvezi sau să renunți la ele?</string>
@@ -172,7 +172,7 @@ Sperăm că vei găsi aplicația utilă! Și nu ezita să sugerezi funcții, să
     <string name="a_automations">Automatizări</string>
     <string name="auto_desc">Cu automatizări, poți efectua acțiuni ale modulelor bazate pe declanșatori (triggers). Poți configura automatizările aici sau le poți dezactiva pe toate folosind comutatorul de mai jos.</string>
     <string name="auto_enabled">Activează funcția de automatizări</string>
-    <string name="auto_error_toast">Arată un toast dacă automatizarea eșuează</string>
+    <string name="auto_error_toast">Afișează un toast dacă automatizarea eșuează</string>
     <string name="auto_notFound">"Nicio automatizare cu cheia '%s' nu este disponibilă. Asigură-te că este validă și că modulul necesar este activ."</string>
     <string name="auto_editor">"Configurare automatizări. Format: listă de obiecte unde cheia este un nume unic de automatizare, iar conținutul include următoarele valori:
 - 'regex': șir|listă: dacă este prezent, un regex java valid cu care URL-ul trebuie să se potrivească pentru ca automatizarea să ruleze. Dacă e listă, cel puțin un regex trebuie să se potrivească. Dacă este omis, toate URL-urile se vor potrivi.
@@ -186,7 +186,7 @@ Sperăm că vei găsi aplicația utilă! Și nu ezita să sugerezi funcții, să
     <string name="auto_available_disabled">"Acest modul este dezactivat, automatizările nu vor rula"</string>
     <string name="auto_rule_bitly">De-scurtează bit.ly</string>
     <string name="auto_rule_webhook">Trimite totul la webhook</string>
-    <string name="auto_rule_toast">Exemplu toast</string>
+    <string name="auto_rule_toast">Exemplu de toast</string>
     <string name="auto_open">"Va deschide URL-ul. Dacă nu sunt furnizate 'args' așteptate, va fi folosită prima aplicație disponibilă (echivalent cu apăsarea butonului 'deschide'). Dacă sunt furnizate 'args': 'package' și/sau 'component', acelea vor fi folosite."</string>
     <string name="auto_share">"Va partaja URL-ul. Echivalent cu apăsarea butonului 'partajează'."</string>
     <string name="auto_copy">"Va copia URL-ul. Echivalent cu apăsarea butonului 'copiază'."</string>
@@ -260,7 +260,7 @@ Notă: dacă editezi tiparele, noile tipare încorporate din actualizările apli
     <string name="mStatus_desc">Apăsând butonul de verificare, se va face o cerere de rețea pentru a prelua și afișa codul de stare al site-ului. Dacă rezultatul este o redirecționare, vei putea vedea URL-ul de destinație. Conținutul URL-ului este obținut (GET), dar nu este evaluat, deci redirecționările bazate pe JavaScript nu vor fi detectate.</string>
     <string name="mStatus_ioerror">Eroare de rețea la încercarea de verificare a URL-ului: %s</string>
     <string name="mStatus_error">Eroare internă la încercarea de verificare a URL-ului: %s</string>
-    <string name="mStatus_check">Verifică stare</string>
+    <string name="mStatus_check">Verifică starea</string>
     <string name="mStatus_recheck">Verifică</string>
     <string name="mStatus_checking">Se verifică…</string>
     <string-array name="mStatus_codes">
@@ -271,7 +271,7 @@ Notă: dacă editezi tiparele, noile tipare încorporate din actualizările apli
         <item>308: Mutat permanent</item>
         <item>400: Cerere greșită (Bad request)</item>
         <item>401: Neautentificat</item>
-        <item>403: Interzis (Forbidden)</item>
+        <item>403: Acces interzis</item>
         <item>404: Nu a fost găsit</item>
         <item>410: Dispărut permanent</item>
         <item>"418: Sunt un ceainic! :D"</item>
@@ -314,7 +314,7 @@ Notă: dacă editezi tiparele, noile tipare încorporate din actualizările apli
 Dacă activezi acest lucru, se vor afișa unele date interne de depanare (cum ar fi uri-ul intent original), utile pentru dezvoltatori.
 
 Poți ține apăsat pentru a selecta text."</string>
-    <string name="mD_ctabs">Arată mesaje de depanare de la serviciul de tab-uri personalizate</string>
+    <string name="mD_ctabs">Afișează mesaje de depanare de la serviciul de tab-uri personalizate</string>
     <string name="mD_show">Încarcă date de depanare</string>
     <!-- -->
     <string name="mHist_name">Istoric</string>
@@ -420,12 +420,12 @@ API-ul lor are o limită de 10 cereri pe oră pentru verificări noi. Răspunsul
     <string name="mFlags_name">Editor flag-uri</string>
     <string name="mFlag_desc">"[Funcție Beta] Acesta este un modul avansat care îți permite să editezi flag-urile (indicatorii) intent-ului atunci când deschizi o altă aplicație.
 Acest modul va afișa o listă de flag-uri; poți schimba dacă flag-ul este setat sau nu atingând pictograma. Există și un meniu de overflow pentru a ascunde flag-uri acolo; este doar vizual, flag-urile vor folosi în continuare starea atribuită.
-Flag-urile vor avea doi indicatori de culoare lângă caseta de bifare. Cel din stânga arată valoarea primită de la intent, cel din dreapta indică starea setată de modulul însuși. Roșu înseamnă că flag-ul nu este setat, iar verde înseamnă că flag-ul este setat. În plus, indicatorul de preferință poate fi gri, ceea ce înseamnă că starea a fost setată pe automat.
+Flag-urile vor avea doi indicatori de culoare lângă caseta de bifare. Cel din stânga indică valoarea primită de la intent, cel din dreapta indică starea setată de modulul însuși. Roșu înseamnă că flag-ul nu este setat, iar verde înseamnă că flag-ul este setat. În plus, indicatorul de preferință poate fi gri, ceea ce înseamnă că starea a fost setată pe automat.
 Cu butonul de mai jos poți edita starea implicită și vizibilitatea flag-urilor."</string>
     <string name="mFlag_editFlags">Editează valorile implicite ale flag-urilor</string>
     <!-- -->
     <string name="mParts_name">Părți URI</string>
-    <string name="mParts_desc">"Acest modul arată toate părțile URL-ului decodificate: schema, autoritatea, căile, interogările și fragmentul.
+    <string name="mParts_desc">"Acest modul afișează toate părțile URL-ului decodificate: schema, autoritatea, căile, interogările și fragmentul.
 Făcând clic pe o parte, aceasta va fi setată ca noul url, util de exemplu dacă una dintre interogări sau căi era un url de redirecționare codificat.
 Printr-o apăsare lungă pe o parte, aceasta va fi copiată în clipboard.
 De asemenea, poți face clic pe butonul 'X' pentru a elimina unele dintre ele.
