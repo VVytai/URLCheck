@@ -28,6 +28,8 @@ public class PatternCatalog extends JsonCatalog {
                 .put(cntx.getString(R.string.mPttrn_upperDomain), new JSONObject()
                         .put("regex", "^.*?://[^/?#]*[A-Z]")
                 )
+                .put("Rickroll", new JSONObject()
+                        .put("regex", "youtu\\.?be.*dQw4w9WgXcQ"))
                 .put(cntx.getString(R.string.mPttrn_http), new JSONObject()
                         .put("regex", "^http://")
                         .put("replacement", "https://")
