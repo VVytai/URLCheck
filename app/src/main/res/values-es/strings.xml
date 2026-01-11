@@ -126,6 +126,7 @@ Hay algunos enlaces cuyo único propósito es redirigirte a otro enlace. Si el e
     -->
     <string name="a_automations">Automatizaciones</string>
     <string name="auto_desc">Con automatizaciones, puedes realizar acciones basadas en estados. Puedes configurar las automatizaciones aquí, o deshabilitarlas completamente usando el boton de debajo.</string>
+    <string name="auto_userContent">Listado de otras automatizaciones útiles creadas por usuarios: %s</string>
     <string name="auto_enabled">Activar automatizaciones</string>
     <string name="auto_error_toast">Mostrar aviso si alguna automatización falla</string>
     <string name="auto_notFound">"No hay ninguna automatización disponible con clave '%s'. Asegúrate de que es válida y el módulo que la incluye está activo."</string>

@@ -173,6 +173,7 @@ Hope you find the app useful! And don't hesitate to suggest features, report bug
     -->
     <string name="a_automations">Automations</string>
     <string name="auto_desc">With automations you can perform module actions based on triggers. You can configure the automations here, or disable all them together using the toggle below.</string>
+    <string name="auto_userContent">List of other useful user-created automations: %s</string>
     <string name="auto_enabled">Enable automations feature</string>
     <string name="auto_error_toast">Show toast if automation fails</string>
     <string name="auto_notFound">"No automation with key '%s' is available. Make sure it is valid and the required module is active."</string>
