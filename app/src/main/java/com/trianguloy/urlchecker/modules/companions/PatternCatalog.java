@@ -29,7 +29,8 @@ public class PatternCatalog extends JsonCatalog {
                         .put("regex", "^.*?://[^/?#]*[A-Z]")
                 )
                 .put("Rickroll", new JSONObject()
-                        .put("regex", "youtu\\.?be.*dQw4w9WgXcQ"))
+                        .put("regex", "youtu\\.?be.*dQw4w9WgXcQ")
+                )
                 .put(cntx.getString(R.string.mPttrn_http), new JSONObject()
                         .put("regex", "^http://")
                         .put("replacement", "https://")
@@ -55,20 +56,30 @@ public class PatternCatalog extends JsonCatalog {
 
                 // privacy redirections samples (see https://github.com/TrianguloY/URLCheck/discussions/122)
                 .put("Reddit ➔ Eddrit", new JSONObject()
+                        // replacement example
                         .put("regex", "^https?://(?:[a-z0-9-]+\\.)*?reddit\\.com/(.*)")
                         .put("replacement", "https://eddrit.com/$1")
                         .put("enabled", false)
                 )
-                .put("Twitter ➔ Nitter", new JSONObject()
+                .put("Twitter/X ➔ Nitter", new JSONObject()
+                        // replacement example again, consider removing
                         .put("regex", "^https?://(?:[a-z0-9-]+\\.)*?(?:twitter|x)\\.com/(.*)")
                         .put("replacement", "https://nitter.net/$1")
                         .put("enabled", false)
                 )
                 .put("Youtube ➔ Invidious", new JSONObject()
+                        // multiple replacements example
                         .put("regex", "^https?://(?:[a-z0-9-]+\\.)*?youtube\\.com/(.*)")
                         .put("replacement", new JSONArray()
                                 .put("https://yewtu.be/$1")
                                 .put("https://farside.link/invidious/$1")
+                        )
+                        .put("enabled", false)
+                )
+                .put("Farside.link", new JSONObject()
+                        // no regex, full replacement
+                        .put("replacement", new JSONArray()
+                                .put("https://farside.link/$0")
                         )
                         .put("enabled", false)
                 )
@@ -79,6 +90,8 @@ public class PatternCatalog extends JsonCatalog {
                         .put("replacement", "https://song.link/$0")
                         .put("enabled", false)
                 )
+
+                // try to find an example with the decode parameter
                 ;
     }
 

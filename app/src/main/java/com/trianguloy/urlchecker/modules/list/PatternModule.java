@@ -135,7 +135,7 @@ class PatternDialog extends AModuleDialog {
                 // check matches:
                 // if 'regex' doesn't exist, the pattern can match (as everything)
                 var regexMatcher = ALL_MATCH.matcher(url);
-                for (var regex : JavaUtils.parseArrayOrElement(data.get("regex"), String.class)) {
+                for (var regex : JavaUtils.parseArrayOrElement(data.opt("regex"), String.class)) {
                     regexMatcher = Pattern.compile(regex).matcher(url);
                     if (regexMatcher.find()) {
                         // if at least one 'regex' matches, the pattern can match (as first to match)
