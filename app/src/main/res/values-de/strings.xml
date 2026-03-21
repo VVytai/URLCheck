@@ -236,8 +236,7 @@
     <string name="mHosts_buildSave">Wird gespeichert…</string>
     <string name="mHosts_built">Datenbank erstellt: %d Hosts</string>
     <string name="mUnshort_unshort">Ent-Kürzen</string>
-    <string name="mUnshort_desc">Dieses Modul stellt gekürzte Links wieder her, indem es sie zu %s schickt, wo sie auf deren Servern ausgewertet und Weiterleitungen für zukünftige Anfragen gespeichert werden. Vermeiden Sie es, Links mit privaten oder sensiblen Daten an diesen Dienst zu schicken.
-\nDie API dieses Dienstes ist auf 10 Anfragen pro Stunde für neue Anfragen beschränkt. Dieses Modul wird in der Antwort die verbleibende Anzahl an Anfragen anzeigen.</string>
+    <string name="mUnshort_desc">Dieses Modul stellt gekürzte Links wieder her, indem es sie zu %s schickt, wo sie auf deren Servern ausgewertet und Weiterleitungen für zukünftige Anfragen gespeichert werden. Vermeiden Sie es, Links mit privaten oder sensiblen Daten an diesen Dienst zu schicken.\nDie kostenlose API dieses Dienstes ist auf 10 neue Anfragen pro Stunde beschränkt. Dieses Modul wird wenn nötig als Antwort die verbleibenden Anfragen anzeigen.\nBei Angabe eines gültigen Tokens verwendet das Modul den authentifizierten Endpunkt, der möglicherweise stabiler ist und andere Limits aufweist.</string>
     <string name="mUnshort_internal">Interner Fehler (%s)</string>
     <string name="mUnshort_notFound">Keine ent-kürzte URL gefunden</string>
     <string name="mUnshort_ok">Ent-Kürzt</string>
@@ -359,4 +358,8 @@
     <string name="mVt_categories">Kategorien:</string>
     <string name="mVt_detections">Funde:</string>
     <string name="mHosts_tm">StevenBlacks Hosts von %s</string>
+    <string name="auto_userContent">Liste nützlicher Automatisierungen anderer Nutzer: %s</string>
+    <string name="mUnshort_token">Token</string>
+    <string name="json_bigger">Schrift vergrößern</string>
+    <string name="json_smaller">Schrift verkleinern</string>
 </resources>

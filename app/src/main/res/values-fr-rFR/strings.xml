@@ -262,8 +262,7 @@ Ceci est le didacticiel, si vous souhaitez l'ignorer vous pouvez le faire en uti
     <!-- -->
     <string name="mUnshort_name">Déraccourcisseur</string>
     <string name="mUnshort_unshort">Déraccourcir</string>
-    <string name="mUnshort_desc">Ce module déraccourcira les liens en les envoyant à %s, qui les évaluera sur leurs serveurs et enregistrera la redirection pour les requêtes futures. Évitez de transmettre des liens contenant des données privées ou sensibles.
-\nLeur API est limitée à 10 requêtes par heure pour les nouveaux contrôles. La réponse du module indiquera le nombre de requêtes que vous avez en attente.</string>
+    <string name="mUnshort_desc">Ce module déraccourcira les liens en les envoyant à %s, qui les évaluera sur leurs serveurs et enregistrera la redirection pour les requêtes futures. Évitez de transmettre des liens contenant des données privées ou sensibles. \nLeur API est limitée à 10 requêtes par heure pour les nouveaux contrôles. La réponse du module indiquera le nombre de requêtes que vous avez en attente.</string>
     <string name="mUnshort_tm">API gratuite fournie par Unshorten.me</string>
     <string name="mUnshort_checking">Vérification…</string>
     <string name="mUnshort_error">Erreur de serveur : %s</string>

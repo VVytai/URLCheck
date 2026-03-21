@@ -258,8 +258,7 @@
     <string name="mHosts_built">数据库构建: %d 主机</string>
     <string name="mUnshort_name">短链接解析器</string>
     <string name="mUnshort_unshort">解析短链接</string>
-    <string name="mUnshort_desc">此模块将通过将网址链接发送到%s 来解析短链接，它们将在其服务器上对该链接进行检查，并为将来的请求保存重定向。避免那些含有私人或敏感数据的短链接。
-\n此API的限制为每小时10个新检查的请求。该模块响应将显示还您有多少请求待处理。</string>
+    <string name="mUnshort_desc">此模块将通过将网址链接发送到%s 来解析短链接，它们将在其服务器上对该链接进行检查，并为将来的请求保存重定向。避免那些含有私人或敏感数据的短链接。 \n此API的限制为每小时10个新检查的请求。该模块响应将显示还您有多少请求待处理。</string>
     <string name="mUnshort_checking">检查中…</string>
     <string name="mUnshort_error">服务器错误: %s</string>
     <string name="mUnshort_internal">内部错误 (%s)</string>

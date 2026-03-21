@@ -281,8 +281,7 @@
 \n- omogućeno: ako je netačno, ceo ovaj objekat će biti preskočen. Podrazumevano tačno.</string>
     <string name="mHosts_buildDesc">Ovo će obrisati trenutnu bazu podataka hostova i izgraditi je sa trenutnom konfiguracijom, preuzimajući datoteke hostova sa interneta ako je potrebno. Ova radnja može potrajati nekoliko sekundi. Nastaviti?</string>
     <string name="mHosts_buildSave">Čuvanje…</string>
-    <string name="mUnshort_desc">Ovaj modul će poništiti kratke veze tako što će ih poslati na %s, koji ih procenjuje na svojim serverima i čuva preusmeravanje za buduće zahteve. Izbegavajte ukidanje veza sa privatnim ili osetljivim podacima.
-\nNjihov API je ograničen na 10 zahteva na sat za nove provere. Odgovor modula će pokazati koliko zahteva imate na čekanju.</string>
+    <string name="mUnshort_desc">Ovaj modul će poništiti kratke veze tako što će ih poslati na %s, koji ih procenjuje na svojim serverima i čuva preusmeravanje za buduće zahteve. Izbegavajte ukidanje veza sa privatnim ili osetljivim podacima. \nNjihov API je ograničen na 10 zahteva na sat za nove provere. Odgovor modula će pokazati koliko zahteva imate na čekanju.</string>
     <string name="mUnshort_error">Greška servera: %s</string>
     <string name="mUnshort_internal">Interna greška (%s)</string>
     <string name="mFlag_editFlags">Uredite podrazumevane vrednosti zastava</string>

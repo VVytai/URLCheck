@@ -223,8 +223,7 @@
     <string name="mRemove_empty">Verwijder leeg</string>
     <string name="mClear_urlError">Kan de regels niet ophalen. Controleer of de URL geldig is en of u een actieve verbinding heeft</string>
     <string name="mLog_limit">Maximaal aantal te behouden vermeldingen. Aanbevolen waarde: 100. Stel leeg in voor onbeperkt</string>
-    <string name="mUnshort_desc">Deze module ontkoppelt links door ze naar %s te sturen, die ze op hun servers evalueert en de omleiding opslaat voor toekomstige verzoeken. Vermijd het verkorten van koppelingen met privé- of gevoelige gegevens.
-\nHun API is beperkt tot 10 verzoeken per uur voor nieuwe cheques. Het moduleantwoord laat zien hoeveel verzoeken u in behandeling heeft.</string>
+    <string name="mUnshort_desc">Deze module ontkoppelt links door ze naar %s te sturen, die ze op hun servers evalueert en de omleiding opslaat voor toekomstige verzoeken. Vermijd het verkorten van koppelingen met privé- of gevoelige gegevens. \nHun API is beperkt tot 10 verzoeken per uur voor nieuwe cheques. Het moduleantwoord laat zien hoeveel verzoeken u in behandeling heeft.</string>
     <string name="mHosts_build">Build</string>
     <string name="mRemove_one">Verwijder %s</string>
     <string name="mFlag_editFlags">Standaardvlagwaarden bewerken</string>
