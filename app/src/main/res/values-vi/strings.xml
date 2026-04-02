@@ -20,7 +20,7 @@
     <string name="btn_linksSettings">Mở các liên kết được hỗ trợ</string>
     <string name="btn_androidSettings">Thiết đặt ứng dụng Android</string>
     <string name="desc_enable">Bật/tắt mô-đun</string>
-    <string name="bkp_data">Dữ liệu: Dữ liệu ứng dụng tiêu chuẩn. Những thứ như mô-đun được kích hoạt, cấu hình json, v.v. Sẽ không bao gồm bí mật cũng như bộ đệm.</string>
+    <string name="bck_data">Dữ liệu: Dữ liệu ứng dụng tiêu chuẩn. Những thứ như mô-đun được kích hoạt, cấu hình json, v.v. Sẽ không bao gồm bí mật cũng như bộ đệm.</string>
     <string name="txt_theme">Chủ đề:</string>
     <string name="spin_darkTheme">Tối</string>
     <string name="spin_lightTheme">Sáng</string>
@@ -31,10 +31,10 @@
     <string name="txt_animation">Bật hoạt ảnh</string>
     <string name="btn_backupRestore">Sao lưu / Khôi phục</string>
     <string name="bck_mn_advanced">Hiển thị tùy chọn nâng cao</string>
-    <string name="btn_backup">Sao lưu</string>
-    <string name="btn_restore">Khôi phục</string>
-    <string name="bkp_data_prefs">Tùy chọn: Dữ liệu được lưu dưới dạng tùy chọn.</string>
-    <string name="bkp_data_files">Tệp: Dữ liệu được lưu dưới dạng tệp.</string>
+    <string name="bck_backup">Sao lưu</string>
+    <string name="bck_restore">Khôi phục</string>
+    <string name="bck_data_prefs">Tùy chọn: Dữ liệu được lưu dưới dạng tùy chọn.</string>
+    <string name="bck_data_files">Tệp: Dữ liệu được lưu dưới dạng tệp.</string>
     <string name="tutorial">Hướng dẫn</string>
     <string name="txt_tutorial3">Đặt ứng dụng làm trình duyệt web mặc định để chặn các URL khi mở chúng.
 \n(Không cần thiết nếu URL được chuyển hướng bằng chức năng “Chia sẻ”.)</string>
@@ -93,9 +93,9 @@
 \nMô-đun này sẽ hiển thị danh sách các cờ, bạn có thể thay đổi xem cờ có được đặt hay không bằng cách nhấn vào biểu tượng. Ngoài ra còn có menu tràn để ẩn cờ trong đó, nó chỉ mang tính trực quan, cờ vẫn sẽ sử dụng trạng thái được chỉ định.
 \nCác cờ sẽ có hai chỉ báo màu bên cạnh hộp kiểm. Phần bên trái hiển thị giá trị nhận được từ ý định, phần bên phải biểu thị trạng thái do chính mô-đun đặt. Màu đỏ có nghĩa là cờ chưa được đặt và màu xanh lá cây có nghĩa là cờ đã được đặt. Ngoài ra, chỉ báo tùy chọn có thể có màu xám, điều này có nghĩa là trạng thái được đặt thành tự động.
 \nVới nút bên dưới, bạn có thể chỉnh sửa trạng thái mặc định và mức độ hiển thị của cờ.</string>
-    <string name="btn_delete">Xóa</string>
-    <string name="bkp_secrets">Bí mật: Dữ liệu được coi là \'bí mật\', như khóa api VirusTotal hoặc nhật ký.</string>
-    <string name="bjp_cache">Bộ đệm: Dữ liệu có thể dễ dàng tải xuống/tạo, như cơ sở dữ liệu máy chủ. Kích hoạt tùy chọn này có thể làm tăng đáng kể kích thước bản sao lưu.</string>
+    <string name="bck_delete">Xóa</string>
+    <string name="bck_secrets">Bí mật: Dữ liệu được coi là \'bí mật\', như khóa api VirusTotal hoặc nhật ký.</string>
+    <string name="bck_cache">Bộ đệm: Dữ liệu có thể dễ dàng tải xuống/tạo, như cơ sở dữ liệu máy chủ. Kích hoạt tùy chọn này có thể làm tăng đáng kể kích thước bản sao lưu.</string>
     <string name="mVT_tm">VirusTotal™ là một nhãn hiệu của Google, Inc.</string>
     <string name="mClear_tm">Danh mục tích hợp được sao chép từ ClearURLs: %s</string>
     <string name="mVT_desc">Khi mô-đun này được bật, bạn có thể quét URL bằng VirusTotal và kiểm tra báo cáo. Cần có khóa API VirusTotal cá nhân để nó hoạt động, bạn có thể nhận một khóa sau khi đăng ký tài khoản miễn phí tại đây: %s.</string>
@@ -128,7 +128,7 @@
     <string name="mClear_clear">Áp dụng</string>
     <string name="mClear_name">Trình dọn dẹp URL</string>
     <string name="link_blog">%s\'s blog</string>
-    <string name="bkp_description">Chọn những phần tử cần sao lưu/khôi phục.
+    <string name="bck_description">Chọn những phần tử cần sao lưu/khôi phục.
 \nKhi khôi phục, nếu bản sao lưu được tạo mà không có nó thì bản sao lưu hiện có sẽ được giữ lại.</string>
     <string name="bck_chooseFile">Chọn tệp sao lưu</string>
     <string name="bck_backupOk">Đã tạo bản sao lưu</string>

@@ -211,8 +211,8 @@
     <string name="mRemove_one">移除 %s</string>
     <string name="btn_backupRestore">備份／還原</string>
     <string name="bck_mn_advanced">顯示進階選項</string>
-    <string name="btn_backup">備份</string>
-    <string name="bkp_data_files">檔案: 儲存為檔案的資料。</string>
+    <string name="bck_backup">備份</string>
+    <string name="bck_data_files">檔案: 儲存為檔案的資料。</string>
     <string name="bck_backupOk">備份已建立</string>
     <string name="bck_backupError">無法建立備份，請嘗試為該檔案選擇其他位置。</string>
     <string name="bck_restoreError">無法還原備份。它是一個有效的檔案嗎？</string>
@@ -226,13 +226,13 @@
     <string name="mRemove_found">找到 %d 個查詢參數</string>
     <string name="mOpen_rejected">如果網址被拒絕則隱藏應用程式（應用程式立即請求再次開啟相同網址）。不影響分享。</string>
     <string name="txt_animation">啟用動畫</string>
-    <string name="btn_delete">刪除</string>
-    <string name="btn_restore">還原</string>
-    <string name="bkp_description">選擇要備份／還原的元素。
+    <string name="bck_delete">刪除</string>
+    <string name="bck_restore">還原</string>
+    <string name="bck_description">選擇要備份／還原的元素。
 \n還原時，如果備份檔案中沒有該元素，則會保留原有的。</string>
-    <string name="bkp_data">資料: 標準應用程式資料。諸如啟用的模組、JSON 配置等之類的東西。不會包含秘密或快取。</string>
-    <string name="bkp_data_prefs">偏好設定: 儲存為偏好設定的資料。</string>
-    <string name="bkp_secrets">秘密: 被視為「秘密」的資料，例如 VirusTotal API 金鑰或紀錄。</string>
+    <string name="bck_data">資料: 標準應用程式資料。諸如啟用的模組、JSON 配置等之類的東西。不會包含秘密或快取。</string>
+    <string name="bck_data_prefs">偏好設定: 儲存為偏好設定的資料。</string>
+    <string name="bck_secrets">秘密: 被視為「秘密」的資料，例如 VirusTotal API 金鑰或紀錄。</string>
     <string name="bck_restoreTitle">還原備份</string>
     <string name="bck_restoreConfirm">取代元素</string>
     <string name="bck_restoreOk">備份已還原</string>

@@ -234,20 +234,20 @@
     <string name="mUnshort_name">Удлинитель</string>
     <string name="btn_backupRestore">Резервное копирование / Восстановление</string>
     <string name="bck_mn_advanced">Показать расширенные настройки</string>
-    <string name="btn_backup">Резервное копирование</string>
-    <string name="btn_delete">Удалить</string>
+    <string name="bck_backup">Резервное копирование</string>
+    <string name="bck_delete">Удалить</string>
     <string name="txt_animation">Включить анимации</string>
-    <string name="btn_restore">Восстановить</string>
-    <string name="bkp_description">Выберите элементы для бэкапа/восстановления.
+    <string name="bck_restore">Восстановить</string>
+    <string name="bck_description">Выберите элементы для бэкапа/восстановления.
 \nПри восстановлении, если бэкап был создан без него, существующие будут сохранены.</string>
     <string name="bck_deleteTitle">Удалить элементы</string>
-    <string name="bjp_cache">Кэш: данные, которые можно легко загрузить/сгенерировать, например база данных хостов. Включение этой опции может значительно увеличить размер резервной копии.</string>
+    <string name="bck_cache">Кэш: данные, которые можно легко загрузить/сгенерировать, например база данных хостов. Включение этой опции может значительно увеличить размер резервной копии.</string>
     <string name="bck_chooseFile">Выберите файл бэкапа</string>
-    <string name="bkp_data">Данные: стандартные данные приложения. Такие как включенные модули, JSON-конфигурации и т.д. Не будет содержать секреты и кэш.</string>
+    <string name="bck_data">Данные: стандартные данные приложения. Такие как включенные модули, JSON-конфигурации и т.д. Не будет содержать секреты и кэш.</string>
     <string name="bck_restoreTitle">Восстановить бэкап</string>
     <string name="bck_backupOk">Бэкап создан</string>
-    <string name="bkp_data_files">Файлы: данные, сохраненные в виде файлов.</string>
-    <string name="bkp_secrets">Секреты: данные, считающиеся «секретными», например ключ API VirusTotal или журнал.</string>
+    <string name="bck_data_files">Файлы: данные, сохраненные в виде файлов.</string>
+    <string name="bck_secrets">Секреты: данные, считающиеся «секретными», например ключ API VirusTotal или журнал.</string>
     <string name="bck_ignoreNewer">Разрешить резервные копии, созданные в более новых версиях приложения.</string>
     <string name="bck_newer">Отменено. Резервная копия была создана в более новой версии приложения.</string>
     <string name="txt_width">Ширина диалога:\nВнимание! Небольшие значения могут скрывать элементы экрана.</string>
@@ -277,7 +277,7 @@
     <string name="mUnshort_to">Удлиняет до %s</string>
     <string name="auto_unshort">Запустит процесс отмены укорачивания. Эквивалент нажатия кнопки \'Удлинить\'.</string>
     <string name="auto_drawer">Откроет панель. Эквивалент нажатия кнопки \'ящик\', если она свернута.</string>
-    <string name="bkp_data_prefs">Настройки: Данные сохранены как настройки.</string>
+    <string name="bck_data_prefs">Настройки: Данные сохранены как настройки.</string>
     <string name="bck_restoreError">Невозможно восстановить бэкап. Это корректный файл?</string>
     <string name="json_save_error">Невозможно сохранить: %s</string>
     <string name="json_reset">Предупреждение: это заменит содержимое редактора встроенным JSON. Все изменения в редакторе будут потеряны, но сохранённое содержимое не будет изменено, если не будет сохранено вручную. Вы хотите продолжить?</string>
